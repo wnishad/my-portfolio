@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nishad Waghmare - Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+        .hero {
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        section {
+            padding: 4rem 2rem;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        .skill-card {
+            background-color: #f4f4f4;
+            padding: 1rem;
+            border-radius: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Nishad Waghmare</h1>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div>
+            <h2>Welcome to My Portfolio</h2>
+            <p>Data Science Professional | Problem Solver | Innovator</p>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am a passionate data science professional with expertise in analyzing complex datasets and deriving meaningful insights. I enjoy solving real-world problems through data-driven approaches and implementing machine learning solutions.</p>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>Python</h3>
+                <p>NumPy, Pandas, Scikit-learn</p>
+            </div>
+            <div class="skill-card">
+                <h3>Machine Learning</h3>
+                <p>Regression, Classification, Clustering</p>
+            </div>
+            <div class="skill-card">
+                <h3>Data Visualization</h3>
+                <p>Matplotlib, Seaborn, Plotly</p>
+            </div>
+            <div class="skill-card">
+                <h3>Statistical Analysis</h3>
+                <p>Hypothesis Testing, A/B Testing</p>
+            </div>
+            <div class="skill-card">
+                <h3>Deep Learning</h3>
+                <p>TensorFlow, Neural Networks</p>
+            </div>
+            <div class="skill-card">
+                <h3>Database</h3>
+                <p>SQL, PostgreSQL</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
