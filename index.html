@@ -23,6 +23,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 1rem;
         }
         nav ul {
             list-style: none;
@@ -32,6 +33,10 @@
         nav a {
             color: white;
             text-decoration: none;
+        }
+        .contact-small {
+            font-size: 0.9rem;
+            color: #ddd;
         }
         .hero {
             height: 60vh;
@@ -56,16 +61,47 @@
             border-radius: 5px;
             text-align: center;
         }
+        .section-title {
+            margin-bottom: 1rem;
+            color: #222;
+        }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        .project-card {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            padding: 1rem;
+            border-radius: 6px;
+        }
+        footer {
+            background: #222;
+            color: #ddd;
+            padding: 2rem;
+            text-align: center;
+        }
+        .contact-list a {
+            color: #88c0ff;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
     <header>
         <nav>
-            <h1>Nishad Waghmare</h1>
+            <div>
+                <h1>Nishad Waghmare</h1>
+                <div class="contact-small">wnishad@gmail.com · (919)-593-6542</div>
+            </div>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -78,38 +114,86 @@
     </section>
 
     <section id="about">
-        <h2>About Me</h2>
-        <p>I am a passionate data science professional with expertise in analyzing complex datasets and deriving meaningful insights. I enjoy solving real-world problems through data-driven approaches and implementing machine learning solutions.</p>
+        <h2 class="section-title">About Me</h2>
+        <p>I am a passionate data science professional with experience turning complex data into actionable insights. Over the course of my professional journey I have worked on projects across (for example) finance, healthcare, and product analytics — building end-to-end solutions that include data cleaning, exploratory analysis, model development, and deployment.</p>
+        <p>My approach is pragmatic: I start by understanding the business goal and data available, then iterate quickly with reproducible code, clear visualizations, and validated models. I enjoy collaborating with cross-functional teams and explaining technical findings in plain language for stakeholders.</p>
+        <p>Areas I focus on include predictive modeling, feature engineering, experiment design, and communicating results with interactive visualizations and reports.</p>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title">Projects</h2>
+        <p>Below are a few representative projects. For each, include: data description, main goals, challenges, solutions implemented, and methods used.</p>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>Project — Churn Prediction (example)</h3>
+                <p><strong>Data:</strong> Customer activity logs + subscription records.</p>
+                <p><strong>Goal:</strong> Predict customers likely to churn within 30 days to target retention campaigns.</p>
+                <p><strong>Challenges:</strong> Data sparsity, class imbalance, and concept drift across quarters.</p>
+                <p><strong>Solution:</strong> Feature engineering (recency/frequency), SMOTE for balancing, ensemble model (XGBoost) with time-based validation. Produced model dashboard and exportable scoring pipeline.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>Project — Sales Forecasting (example)</h3>
+                <p><strong>Data:</strong> Historical sales, promotions, and calendar data.</p>
+                <p><strong>Goal:</strong> Improve short-term demand forecasts to optimize inventory.</p>
+                <p><strong>Challenges:</strong> Seasonality, promotion-driven spikes, and missing values.</p>
+                <p><strong>Solution:</strong> Time-series cross validation, FB Prophet and LSTM baselines, feature-based regression with holidays and promo indicators, and dashboarding results for business users.</p>
+            </div>
+        </div>
+        <p style="margin-top:1rem; font-size:0.9rem; color:#555;">Tip: Add 1–2 real projects like the examples above. Employers appreciate concise descriptions with metrics (e.g., "increased retention by 12%" or "reduced forecast error by 18%").</p>
     </section>
 
     <section id="skills">
-        <h2>Skills</h2>
+        <h2 class="section-title">Skills</h2>
+        <h3>Technical Skills</h3>
         <div class="skills-grid">
             <div class="skill-card">
-                <h3>Python</h3>
-                <p>NumPy, Pandas, Scikit-learn</p>
+                <h4>Python</h4>
+                <p>NumPy, Pandas, Scikit-learn, Jupyter</p>
             </div>
             <div class="skill-card">
-                <h3>Machine Learning</h3>
-                <p>Regression, Classification, Clustering</p>
+                <h4>Machine Learning</h4>
+                <p>Regression, Classification, Clustering, XGBoost</p>
             </div>
             <div class="skill-card">
-                <h3>Data Visualization</h3>
-                <p>Matplotlib, Seaborn, Plotly</p>
+                <h4>Data Visualization</h4>
+                <p>Matplotlib, Seaborn, Plotly, Dash</p>
             </div>
             <div class="skill-card">
-                <h3>Statistical Analysis</h3>
-                <p>Hypothesis Testing, A/B Testing</p>
+                <h4>Statistical Analysis</h4>
+                <p>Hypothesis Testing, A/B Testing, Experimental Design</p>
             </div>
             <div class="skill-card">
-                <h3>Deep Learning</h3>
-                <p>TensorFlow, Neural Networks</p>
+                <h4>Deep Learning</h4>
+                <p>TensorFlow, Keras, Neural Networks</p>
             </div>
             <div class="skill-card">
-                <h3>Database</h3>
-                <p>SQL, PostgreSQL</p>
+                <h4>Database & Tools</h4>
+                <p>SQL, PostgreSQL, Git, Docker</p>
             </div>
         </div>
+
+        <h3 style="margin-top:1.5rem;">Soft Skills</h3>
+        <ul style="margin-top:0.5rem; max-width:700px; line-height:1.8; color:#333;">
+            <li>Communication — explaining technical results to non-technical stakeholders</li>
+            <li>Collaboration — working with cross-functional teams</li>
+            <li>Problem Solving — framing business problems and designing data-driven solutions</li>
+            <li>Project Management — delivering reproducible analysis on time</li>
+        </ul>
     </section>
+
+    <section id="contact">
+        <h2 class="section-title">Contact</h2>
+        <p>If you'd like to get in touch, please use the contact details below or send an email directly.</p>
+        <div class="contact-list" style="margin-top:1rem;">
+            <p><strong>Email:</strong> <a href="mailto:wnishad@gmail.com">wnishad@gmail.com</a></p>
+            <p><strong>Phone:</strong> <a href="tel:+19195936542">(919)-593-6542</a></p>
+            <p><strong>Resume:</strong> <a href="./Nishad_Waghmare_Resume.pdf" download="Nishad_Waghmare_Resume.pdf">Download Resume (PDF)</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <div>© Nishad Waghmare — wnishad@gmail.com · (919)-593-6542</div>
+    </footer>
 </body>
 </html>
